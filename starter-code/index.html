@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com"> 
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+  <link href="https://fonts.googleapis.com/css2?family=Antonio:wght@500&family=Spartan:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com"> 
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+  <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;700&display=swap" rel="stylesheet"> 
+  <script src="tabs.js" defer></script>
+  <link rel="stylesheet" href="./style.css">
+  <title>Frontend Mentor | Planets fact site</title>
+</head>
+<body>
+  <main>
+  <header>
+    <p class="header-logo">The Planets</p>
+    <div onclick="document.getElementById('mobile-nav-menu').style.display='flex'" class="sandwich-menu">
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+    </div>
+
+    <nav id="desktop-nav-menu" class="desktop-nav-menu">
+          <a href="./index.html">mercury</a>
+          <a href="./venus.html">venus</a>
+          <a href="./earth.html">earth</a>
+          <a href="./mars.html">mars</a>
+          <a href="./jupiter.html">jupiter</a>
+          <a href="./saturn.html">saturn</a>
+          <a href="./uranus.html">uranus</a>
+          <a href="./neptune.html">neptune</a>
+    </nav>
+    
+  </header>
+
+
+  <nav id="mobile-nav-menu" class="mobile-nav-menu">
+    <div class="cancel-mobile-menu">
+      <p id="cancel-button"onclick="document.getElementById('mobile-nav-menu').style.display='none'">X</p></div>
+    <div class="mobile-nav-item-container">
+      <div class="display-flex">
+        <div id="mobile-nav-mercury" class="mobile-nav-planet"></div>
+        <a href="./index.html">mercury</a>
+      </div>
+      <img src="assets/icon-chevron.svg">
+    </div>
+    <div class="mobile-nav-item-container">
+      <div class="display-flex">
+        <div id="mobile-nav-venus" class="mobile-nav-planet"></div>
+        <a href="./venus.html">venus</a>
+      </div>
+      <img src="assets/icon-chevron.svg">
+    </div>
+    <div class="mobile-nav-item-container">
+      <div class="display-flex">
+        <div id="mobile-nav-earth" class="mobile-nav-planet"></div>
+        <a href="./earth.html">earth</a>
+      </div>
+      <img src="assets/icon-chevron.svg">
+    </div>
+    <div class="mobile-nav-item-container">
+      <div class="display-flex">
+        <div id="mobile-nav-mars" class="mobile-nav-planet"></div>
+        <a href="./mars.html">mars</a>
+      </div>
+      <img src="assets/icon-chevron.svg">
+    </div>
+    <div class="mobile-nav-item-container">
+      <div class="display-flex">
+        <div id="mobile-nav-jupiter" class="mobile-nav-planet"></div>
+        <a href="./jupiter.html">jupiter</a>
+      </div>
+      <img src="assets/icon-chevron.svg">
+    </div>
+    <div class="mobile-nav-item-container">
+      <div class="display-flex">
+        <div id="mobile-nav-saturn" class="mobile-nav-planet"></div>
+        <a href="./saturn.html">saturn</a>
+      </div>
+      <img src="assets/icon-chevron.svg">
+    </div>
+    <div class="mobile-nav-item-container">
+      <div class="display-flex">
+        <div id="mobile-nav-uranus" class="mobile-nav-planet"></div>
+        <a href="./uranus.html">uranus</a>
+      </div>
+      <img src="assets/icon-chevron.svg">
+    </div>
+    <div id="neptune-no-border"class="mobile-nav-item-container">
+      <div class="display-flex">
+        <div id="mobile-nav-neptune" class="mobile-nav-planet"></div>
+        <a href="./neptune.html">neptune</a>
+      </div>
+      <img src="assets/icon-chevron.svg">
+    </div>
+  </nav>
+
+
+  <div id="mercury" class="mercury-container">
+    <ul class="tabs">
+      <li data-tab-target="#home" class="active tab"><h3>Overview</h3></li>
+      <li data-tab-target="#pricing" class="tab"><h3>Structure</h3></li>
+      <li data-tab-target="#about" class="tab"><h3>Surface</h3></li>
+    </ul>
+    
+    <div class="tab-content">
+      <div id="home" data-tab-content class="active">
+        <div class="tabs-content image-container">
+          <img class="planet-img" src="assets/planet-mercury.svg">
+        </div>
+        <div class="content">
+          <h1>Mercury</h1>
+          <p>
+            Mercury is the smallest planet in the Solar System and the closest to the Sun. Its orbit around the Sun takes 87.97 Earth days, the shortest of all the Sun's planets. Mercury is one of four terrestrial planets in the Solar System, and is a rocky body like Earth.
+          </p>
+          <p>
+            <span>Source : </span><a class="wiki-link" href="https://en.wikipedia.org/wiki/Mercury_(planet)">Wikipedia</a><img src="assets/icon-source.svg"> 
+          </p>
+        </div>
+      </div>
+      <div id="about" data-tab-content>
+        <div class="image-container">
+          <img class="planet-img" src="assets/planet-mercury-internal.svg">
+        </div>
+        <div class="content">
+          <h1>Mercury</h1>
+          <p> Mercury appears to have a solid silicate crust and mantle overlying a solid, iron sulfide outer core layer, a deeper liquid core layer, and a solid inner core. The planet's density is the second highest in the Solar System at 5.427 g/cm3 , only slightly less than Earth's density.</p>
+          <p><span>Source : </span><a href="https://en.wikipedia.org/wiki/Mercury_(planet)#Internal_structure">Wikipedia</a><img src="assets/icon-source.svg"> </p>
+        </div>
+      </div>
+      <div id="pricing" data-tab-content>
+        <div class="image-container">
+          <img class="planet-img" src="assets/planet-mercury.svg">
+          <img class="surface-img" src="./assets/geology-mercury.png">
+        </div>
+        <div class="content">
+          <h1>Mercury</h1>
+          <p>
+            Mercury's surface is similar in appearance to that of the Moon, showing extensive mare-like plains and heavy cratering, indicating that it has been geologically inactive for billions of years. It is more heterogeneous than either Mars's or the Moon’s.
+          </p>
+          <p>
+            <span>Source : </span><a href="https://en.wikipedia.org/wiki/Mercury_(planet)#Surface_geology">Wikipedia</a><img src="assets/icon-source.svg"> 
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <article class="stat-container">
+      <div class="stat-card">
+        <h4>
+          Rotation Time
+        </h4>
+  
+        <h2>
+          58.6 Days
+        </h2>
+      </div>
+  
+      <div class="stat-card">
+        <h4>
+          Revolution Time
+        </h4>
+        <h2>
+          87.97 Days
+        </h2>
+      </div>
+  
+      <div class="stat-card">
+        <h4>
+          Radius
+        </h4>
+        <h2>
+          2,439.7 KM
+        </h2>
+      </div>
+  
+      <div class="stat-card">
+        <h4>
+          Average Temp.
+        </h4>
+        <h2>
+          430°c
+        </h2>
+      </div>
+    </article>
+  </footer>
+  </main>
+</body>
+</html>

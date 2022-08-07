@@ -1,0 +1,783 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #070724;
+  background-image: url("./assets/background-stars.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 100vw;
+  height: 100vh;
+  color: white;
+  text-align: center;
+  max-width: 500px;
+  overflow: scroll;
+}
+
+main {
+  width: 100vw;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.display-flex {
+  display: flex;
+  align-items: center;
+}
+
+/* 1. Universal Stylings */
+.header-logo {
+  font-family: "Antonio";
+  font-weight: 700;
+  font-size: 1.75rem; 
+  text-transform: uppercase;
+  line-break: -1px;
+}
+
+h1 {
+  font-family: 'Antonio';
+  font-weight: 500;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  margin-bottom: 25px;
+}
+
+h2 {
+  font-family: 'Antonio';
+  font-weight: 500;
+  font-size: 1.25rem;
+  text-transform: uppercase;
+  line-break: -0.5px;
+}
+
+h3 {
+  font-family: 'Spartan';
+  font-weight: 700;
+  font-size: 0.6rem;
+  text-transform: uppercase;
+  line-break: 2.6px;
+  color: white;
+}
+
+h4 {
+  font-family: 'Spartan';
+  font-size: 0.5rem;
+  text-transform: uppercase;
+  line-height: 1.5rem;
+  line-break: 1px;
+  color: #838391;
+  font-weight: 700;
+}
+
+p {
+  font-family: 'Spartan';
+  font-size: 0.7rem;
+  font-weight: 400;
+  line-height: 25px;
+
+}
+
+a {
+  font-family: 'Spartan';
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: white;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.wiki-link {
+  color: #838391;
+  font-weight: 700;
+}
+
+
+
+
+/* ============================ Page Layout ============================= */
+/* ===== Header ===== */
+header {
+  width: 100%;
+  padding: 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 500px;
+}
+/* ===== Desktop Nav ===== */
+.desktop-nav-menu {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  display: none;
+  padding: 30px 25px;
+}
+
+.desktop-nav-menu a {
+  font-size: 0.6rem;
+}
+/* ===== Mobile Nav ===== */
+.sandwich-menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 18px;
+  cursor: pointer;
+}
+
+.line {
+  width: 24px;
+  height: 3px;
+  background-color: white;
+}
+
+.mobile-nav-menu {
+  background-color: #070724;
+  background-image: url("./assets/background-stars.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 100%;
+  height: 100vh;
+  padding: 25px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  display: none;
+  position: absolute;
+  position: fixed;
+  top: 0;
+  z-index: 3;
+}
+
+.cancel-mobile-menu {
+  width: 100%;
+  text-align: right;
+}
+
+#cancel-button {
+  font-family: 'Spartan';
+  font-weight: 700;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.mobile-nav-item-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+  height: 100%;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.mobile-nav-planet {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  margin-right: 25px;
+}
+
+#neptune-no-border {
+  border: none;
+}
+/* ====================== Individual Planet Colors ================== */
+#mobile-nav-mercury {
+  background-color: #DEF4FC;
+}
+#mobile-nav-venus {
+  background-color: #F7CC7F;
+}
+#mobile-nav-earth {
+  background-color: #545BFE;
+}
+#mobile-nav-mars {
+  background-color: #FF6A45;
+}
+#mobile-nav-jupiter {
+  background-color: #ECAD7A;
+}
+#mobile-nav-saturn {
+  background-color: #FCCB6B;
+}
+#mobile-nav-uranus {
+  background-color: #65F0D5;
+}
+#mobile-nav-neptune {
+  background-color: #497EFA;
+}
+
+/* ====== Tabs ======== */
+[data-tab-content] {
+  display: none;
+}
+
+.active[data-tab-content] {
+  display: block;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+.tabs {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  border-top: 1px solid #38384F;
+  border-bottom: 1px solid #38384F;
+  font-weight: bold;
+  font-family: 'Spartan';
+  list-style: none;
+}
+
+.tab {
+  width: 100%;
+  border: none;
+  background: none;
+  font-family: 'Spartan';
+  opacity: 50%;
+  padding: 25px;
+  cursor: pointer;
+}
+
+.tabs-content {
+  display: none;
+}
+
+.tab.active {
+  display: block;
+}
+
+.tab.active {
+  opacity: 100%;
+  border-bottom: 4px solid #419EBB;
+}
+/* ===== Planet Info Nav ===== */
+.content {
+  order: 4;
+}
+
+.image-container {
+  order: 2;
+}
+
+/* .info-container {
+  width: 100%;
+  max-width: 500px;
+} */
+
+.desktop-tab-container {
+  display: none;
+}
+
+/*.infotabs {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  align-items: center;
+  border: 1px solid red;
+}
+
+.infotabs input[type="radio"] {
+  display: none;
+}
+
+.infotabs label {
+  padding: 25px;
+  width: 33%;
+  font-weight: bold;
+  border-top: 1px solid #38384F;
+  border-bottom: 1px solid #38384F;
+  opacity: 50%;
+  font-family: 'Spartan';
+  order: 1;
+}
+
+.infotabs .image-container, .infotabs .content{
+  width: 100%;
+  display: none;
+}
+
+.infotabs input[type='radio']:checked + label + .image-container {
+  display: block;
+}
+.infotabs input[type='radio']:checked + label + .image-container + .content {
+  display: block;
+}
+
+.infotabs input[type="radio"]:checked + #mercury {
+  border-bottom: 4px solid #419EBB;
+  opacity: 100%;
+}
+
+.infotabs input[type="radio"]:checked + #venus {
+  border-bottom: 4px solid #EDA249;
+  opacity: 100%;
+}
+
+.infotabs input[type="radio"]:checked + #earth {
+  border-bottom: 4px solid #6D2ED5;
+  opacity: 100%;
+}
+
+.infotabs input[type="radio"]:checked + #jupiter {
+  border-bottom: 4px solid #D83A34;
+  opacity: 100%;
+}
+
+.infotabs input[type="radio"]:checked + #mars {
+  border-bottom: 4px solid #D14C32;
+  opacity: 100%;
+}
+
+.infotabs input[type="radio"]:checked + #saturn {
+  border-bottom: 4px solid #CD5120;
+  opacity: 100%;
+}
+
+.infotabs input[type="radio"]:checked + #uranus {
+  border-bottom: 4px solid #1EC1A2;
+  opacity: 100%;
+}
+
+.infotabs input[type="radio"]:checked + #neptune {
+  border-bottom: 4px solid #2D68F0;
+  opacity: 100%;
+}  */
+
+/* ======================== Planet Info ========================== */
+.content-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.image-container {
+  height: 305px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.surface-img {
+  height: 80px;
+  width: auto;
+  position: absolute;
+  transform: translateY(60px);
+}
+
+.content p {
+  margin-bottom: 15px;
+  padding: 0px 25px;
+}
+
+.content a {
+  text-transform: none;
+  text-decoration: underline;
+  margin-right: 4px;
+  font-family: 'Spartan';
+  font-weight: 700;
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.content span {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.75rem;
+}
+/* ===== Footer ===== */
+footer {
+  width: 100%;
+  padding: 25px;
+  max-width: 500px;
+}
+.stat-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #38384F;
+  padding: 15px 20px;
+  margin-bottom: 10px;
+}
+
+/* ======================= Mercury Page ===================== */
+/* ===== Planet Info ===== */
+.mercury-container .planet-img {
+  width: 111px;
+  height: 111px;
+}
+
+/* ======================= Venus Page ===================== */
+/* ===== Planet Info ===== */
+.venus-container .planet-img {
+  width: 154px;
+  height: 154px;
+}
+
+/* ======================= Earth Page ===================== */
+/* ===== Planet Info ===== */
+.earth-container .planet-img {
+  width: 173px;
+  height: 173px;
+}
+/* ===== Footer ===== */
+/* ======================= Mars Page ===================== */
+/* ===== Planet Info ===== */
+.mars-container .planet-img {
+  width: 129px;
+  height: 129px;
+}
+/* ===== Footer ===== */
+/* ======================= Jupiter Page ===================== */
+/* ===== Planet Info ===== */
+.jupiter-container .planet-img {
+  width: 224px;
+  height: 224px;
+}
+/* ===== Footer ===== */
+/* ======================= Saturn Page ===================== */
+/* ===== Planet Info ===== */
+.saturn-container .planet-img {
+  width: 256px;
+  height: 256px;
+}
+/* ===== Footer ===== */
+/* ======================= Uranus Page ===================== */
+/* ===== Planet Info ===== */
+.uranus-container .planet-img {
+  width: 176px;
+  height: 176px;
+}
+/* ===== Footer ===== */
+/* ======================= Neptune Page ===================== */
+/* ===== Planet Info ===== */
+.neptune-container .planet-img {
+  width: 173px;
+  height: 173px;
+}
+
+span {
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+
+
+
+
+
+
+.tab-content {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.mercury-container {
+  grid: auto;
+}
+
+
+/* Media Queries */
+@media (min-width:625px) {
+  /* ====================== Stylings ======================= */
+  h1 {
+    font-size: 3rem;
+  }
+  
+  h2 {
+    font-size: 1.5rem;
+  }
+  
+  h3 {
+    font-family: 'Spartan';
+    font-weight: 700;
+    font-size: 0.6rem;
+    text-transform: uppercase;
+    line-break: 2.6px;
+    color: white;
+  }
+
+  .sandwich-menu {
+    display: none;
+  }
+
+  .desktop-nav-menu {
+    display: flex;
+  }
+
+  .header-logo {
+    width: 100%;
+    max-width: 1440px;
+  }
+
+  header {
+    flex-direction: column;
+    max-width: 1440px;
+    padding: 25px 0px 0px 0px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .info-container {
+    max-width: 1440px;
+  }
+
+  /* ======================= Tabs Styling ====================== */
+  .mobile-info-container {
+    display: none;
+  }
+  
+  .tablet-info-container {
+    display: block;
+  }
+  
+  .desktop-tab-container {
+    display: flex;
+  }
+
+  .desktop-tab-container .number {
+    opacity: 50%;
+    margin-right: 10px;
+  }
+
+  .mobile-tab {
+    display: none;
+  }
+
+  
+  .tabs-button {
+    padding: 15px;
+    width: 100%;
+    max-width: 281px;
+    font-weight: bold;
+    border: 1px solid #38384F;
+    opacity: 100%;
+  }
+
+  .mercury-container .tabs-button-active {
+    background-color: #419EBB;
+    border: 1px solid #419EBB;
+  }
+
+ 
+
+  .infotabs input[type="radio"]:checked + #venus {
+    background-color: #EDA249;
+    border: 1px solid #EDA249;
+  }
+
+  .infotabs input[type="radio"]:checked + #earth {
+    background-color: #6D2ED5;
+    border: 1px solid #6D2ED5;
+  }
+
+  .infotabs input[type="radio"]:checked + #mars {
+    background-color: #D14C32;
+    border: 1px solid #D14C32;
+  }
+
+  .infotabs input[type="radio"]:checked + #jupiter {
+    background-color: #D83A34;
+    border: 1px solid #D83A34;
+  }
+
+  .infotabs input[type="radio"]:checked + #saturn {
+    background-color: #CD5120;
+    border: 1px solid #CD5120;
+  }
+
+  .infotabs input[type="radio"]:checked + #uranus {
+    background-color: #1EC1A2;
+    border: 1px solid #1EC1A2;
+  }
+
+  .infotabs input[type="radio"]:checked + #neptune {
+    background-color: #2D68F0;
+    border: 1px solid #2D68F0;
+  }
+
+  
+
+  
+
+
+  /* ======================= Planet Image Size ===================== */
+
+  .mercury-container .planet-img {
+   width: 184px;
+   height: 184px;
+  }
+
+  .venus-container .planet-img {
+   width: 253px;
+   height: 253px;
+  }
+
+  .earth-container .planet-img {
+   width: 285px;
+   height: 285px;
+  }
+
+ .mars-container .planet-img {
+   width: 213px;
+   height: 213px;
+ }
+
+   .jupiter-container .planet-img {
+   width: 369px;
+   height: 369px;
+ }
+
+ .saturn-container .planet-img {
+   width: 422px;
+   height: 422px;
+ }
+  .uranus-container .planet-img {
+   width: 290px;
+   height: 290px;
+  }
+
+  .neptune-container .planet-img {
+   width: 285px;
+   height: 285px;
+  }
+
+  /* ==================== Footer ======================= */
+  footer {
+    max-width: 1000px;
+  }
+  
+  .stat-card {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    padding: 20px;
+  }
+
+  .stat-container {
+    display: flex;
+    width: 100%;
+    max-width: 1000px;
+    gap: 10px;
+  }
+}
+
+@media (min-width:1000px) {
+  /* ==================== Stylings ===================== */
+  h1 {
+    font-size: 5rem;
+  }
+  
+  h2 {
+    font-size: 2.5rem;
+  }
+  
+  h3 {
+    font-size: 0.75rem;
+  }
+  
+  h4 {
+    font-size: ;
+  }
+  
+  p {
+    font-size: 0.9rem;
+  
+  }
+  header {
+    flex-direction: row;
+    padding: 0px 0px 0px 25px;
+  }
+  .header-logo {
+    text-align: left;
+  }
+
+  /* ======================= Layout ========================= */
+  .content-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+
+  .tabs-container {
+    grid-area: 2 / 2 / 3 / 3 ;
+    flex-direction: column;
+    border: 1px solid red;
+  }
+
+  .image-container {
+    grid-area: 1 / 1 / 3 / 2;
+    width: 100vw;
+    height: 430px;
+    border: 1px solid red;
+  }
+
+  .tabs-content-active {
+    display: grid;
+  }
+
+  .content {
+    grid-area: 1 / 2 / 2 / 3;
+    border: 1px solid navajowhite;
+    width: 50%;
+  }
+
+  
+
+  /* ======================= Planet Image Size ===================== */
+
+  .mercury-container .planet-img {
+    width: 290px;
+    height: 290px;
+   }
+ 
+   .venus-container .planet-img {
+    width: 400px;
+    height: 400px;
+   }
+ 
+   .earth-container .planet-img {
+    width: 450px;
+    height: 450px;
+   }
+ 
+  .mars-container .planet-img {
+    width: 336px;
+    height: 336px;
+  }
+ 
+    .jupiter-container .planet-img {
+    width: 582px;
+    height: 528px;
+  }
+ 
+  .saturn-container .planet-img {
+    width: 666.09px;
+    height: 666.09px;
+  }
+   .uranus-container .planet-img {
+    width: 458px;
+    height: 458px;
+   }
+ 
+   .neptune-container .planet-img {
+    width: 450px;
+    height: 450px;
+   }
+    
+
+}
+
+
+
+
