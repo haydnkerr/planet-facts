@@ -537,47 +537,7 @@ span {
     opacity: 100%;
   }
 
-  .mercury-container .tabs-button-active {
-    background-color: #419EBB;
-    border: 1px solid #419EBB;
-  }
-
- 
-
-  .infotabs input[type="radio"]:checked + #venus {
-    background-color: #EDA249;
-    border: 1px solid #EDA249;
-  }
-
-  .infotabs input[type="radio"]:checked + #earth {
-    background-color: #6D2ED5;
-    border: 1px solid #6D2ED5;
-  }
-
-  .infotabs input[type="radio"]:checked + #mars {
-    background-color: #D14C32;
-    border: 1px solid #D14C32;
-  }
-
-  .infotabs input[type="radio"]:checked + #jupiter {
-    background-color: #D83A34;
-    border: 1px solid #D83A34;
-  }
-
-  .infotabs input[type="radio"]:checked + #saturn {
-    background-color: #CD5120;
-    border: 1px solid #CD5120;
-  }
-
-  .infotabs input[type="radio"]:checked + #uranus {
-    background-color: #1EC1A2;
-    border: 1px solid #1EC1A2;
-  }
-
-  .infotabs input[type="radio"]:checked + #neptune {
-    background-color: #2D68F0;
-    border: 1px solid #2D68F0;
-  }
+  
 
   
 
@@ -585,6 +545,9 @@ span {
 
 
   /* ======================= Planet Image Size ===================== */
+  .image-container {
+    height: 440px;
+  }
 
   .mercury-container .planet-img {
    width: 184px;
