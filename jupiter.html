@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="en"> 
+   <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+     <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
   
     <link rel="preconnect" href="https://fonts.googleapis.com"> 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
@@ -27,6 +27,16 @@
       <div class="line"></div>
     </div>
 
+    <nav id="jupiter-desktop-nav-menu" class="desktop-nav-menu">
+      <a href="./index.html">mercury</a>
+      <a href="./venus.html">venus</a>
+      <a href="./earth.html">earth</a>
+      <a href="./mars.html">mars</a>
+      <a class="nav-active" href="./jupiter.html">jupiter</a>
+      <a href="./saturn.html">saturn</a>
+      <a href="./uranus.html">uranus</a>
+      <a href="./neptune.html">neptune</a>
+</nav>
     
   </header>
   <nav id="mobile-nav-menu" class="mobile-nav-menu">
@@ -91,82 +101,28 @@
 
   <div id="jupiter" class="jupiter-container">
     <ul class="tabs">
-      <li data-tab-target="#home" class="active tab"><h3>Overview</h3></li>
-      <li data-tab-target="#pricing" class="tab"><h3>Structure</h3></li>
-      <li data-tab-target="#about" class="tab"><h3>Surface</h3></li>
+      <li data-tab-target="#jupiter-overview" class="active tab"><h3>Overview</h3></li>
+      <li data-tab-target="#jupiter-structure" class="tab"><h3>Structure</h3></li>
+      <li data-tab-target="#jupiter-surface" class="tab"><h3>Surface</h3></li>
     </ul>
     
     <div class="tab-content">
-      <div id="home" data-tab-content class="active">
-        <div class="tabs-content image-container">
-          <img class="planet-img" src="assets/planet-mercury.svg">
-        </div>
-        <div class="content">
-          <h1>Mercury</h1>
-          <p>
-            Mercury is the smallest planet in the Solar System and the closest to the Sun. Its orbit around the Sun takes 87.97 Earth days, the shortest of all the Sun's planets. Mercury is one of four terrestrial planets in the Solar System, and is a rocky body like Earth.
-          </p>
-          <p>
-            <span>Source : </span><a class="wiki-link" href="https://en.wikipedia.org/wiki/Mercury_(planet)">Wikipedia</a><img src="assets/icon-source.svg"> 
-          </p>
-        </div>
-      </div>
-      <div id="about" data-tab-content>
+      <div id="jupiter-overview" data-tab-content class="active">
         <div class="image-container">
-          <img class="planet-img" src="assets/planet-mercury-internal.svg">
+          <img class="planet-img" src="assets/planet-jupiter.svg">
         </div>
+        
         <div class="content">
-          <h1>Mercury</h1>
-          <p> Mercury appears to have a solid silicate crust and mantle overlying a solid, iron sulfide outer core layer, a deeper liquid core layer, and a solid inner core. The planet's density is the second highest in the Solar System at 5.427 g/cm3 , only slightly less than Earth's density.</p>
-          <p><span>Source : </span><a href="https://en.wikipedia.org/wiki/Mercury_(planet)#Internal_structure">Wikipedia</a><img src="assets/icon-source.svg"> </p>
-        </div>
-      </div>
-      <div id="pricing" data-tab-content>
-        <div class="image-container">
-          <img class="planet-img" src="assets/planet-mercury.svg">
-          <img class="surface-img" src="./assets/geology-mercury.png">
-        </div>
-        <div class="content">
-          <h1>Mercury</h1>
+          <h1>Jupiter</h1>
           <p>
-            Mercury's surface is similar in appearance to that of the Moon, showing extensive mare-like plains and heavy cratering, indicating that it has been geologically inactive for billions of years. It is more heterogeneous than either Mars's or the Moon’s.
+            Jupiter is the fifth planet from the Sun and the largest in the Solar System. It is a gas giant with a mass two and a half times that of all the other planets in the Solar System combined, but less than one-thousandth the mass of the Sun.
           </p>
           <p>
-            <span>Source : </span><a href="https://en.wikipedia.org/wiki/Mercury_(planet)#Surface_geology">Wikipedia</a><img src="assets/icon-source.svg"> 
+            <span>Source : </span><a class="wiki-link" href="https://en.wikipedia.org/wiki/Jupiter">Wikipedia</a><img src="assets/icon-source.svg"> 
           </p>
         </div>
       </div>
-    </div>
-  </div>
-
-  
-  
-    <article class="info-container jupiter-container">
-      <div class="infotabs">
-        <!-- Overview Content Start -->
-        <input type="radio" id="overview-tab" name="infotabs" checked="checked">
-        <label id="jupiter" for="overview-tab"><h3>Overview</h3></label>
-        <div id="overview-content-container" class="content-container">
-          <div class="image-container">
-            <img class="planet-img" src="assets/planet-jupiter.svg">
-          </div>
-          
-          <div class="content">
-            <h1>Jupiter</h1>
-            <p>
-              Jupiter is the fifth planet from the Sun and the largest in the Solar System. It is a gas giant with a mass two and a half times that of all the other planets in the Solar System combined, but less than one-thousandth the mass of the Sun.
-            </p>
-            <p>
-              <span>Source : </span><a class="wiki-link" href="https://en.wikipedia.org/wiki/Jupiter">Wikipedia</a><img src="assets/icon-source.svg"> 
-            </p>
-          </div>
-        </div>
-       <!-- Overview Content End -->
-
-       <!-- Internal Structure Content Start -->
-       <input type="radio" id="structure-tab" name="infotabs">
-       <label id="jupiter" for="structure-tab"><h3>Structure</h3></label>
-       <div id="internal-structure-container" class="content-container">
+      <div id="jupiter-structure" data-tab-content>
         <div class="image-container">
           <img class="planet-img" src="assets/planet-jupiter-internal.svg">
         </div>
@@ -177,13 +133,8 @@
           </p>
           <p><span>Source : </span><a href="https://en.wikipedia.org/wiki/Jupiter#Internal_structure">Wikipedia</a><img src="assets/icon-source.svg"> </p>
         </div>
-       </div>
-       <!-- Internal Structure Content End -->
-
-       <!-- Surface Geology Content Start -->
-       <input type="radio" id="surface-tab" name="infotabs">
-       <label id="jupiter" for="surface-tab"><h3>Surface</h3></label>
-       <div id="surface-geology-container" class="content-container">
+      </div>
+      <div id="jupiter-surface" data-tab-content>
         <div class="image-container">
           <img class="planet-img" src="assets/planet-jupiter.svg">
           <img class="surface-img" src="./assets/geology-jupiter.png">
@@ -198,10 +149,12 @@
           </p>
         </div>
       </div>
-      <!-- Surface Geology Content End -->
-      </div>
-    </article>
+    </div>
+  </div>
 
+  
+          
+        
   <footer>
     <article class="stat-container">
       <div class="stat-card">
