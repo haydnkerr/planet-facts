@@ -9,11 +9,10 @@ body {
   background-image: url("./assets/background-stars.svg");
   background-repeat: no-repeat;
   background-size: contain;
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   color: white;
   text-align: center;
-  max-width: 500px;
   overflow: scroll;
 }
 
@@ -116,7 +115,7 @@ header {
   display: flex;
   justify-content: space-between;
   display: none;
-  
+
 }
 
 .desktop-nav-menu a {
@@ -124,6 +123,7 @@ header {
   width: 100%;
   padding: 30px 25px;
   opacity: 50%;
+  border-bottom: 1px solid #38384F;
 }
 
 #mercury-desktop-nav-menu .nav-active {
@@ -364,6 +364,7 @@ body {
 .content p {
   margin-bottom: 15px;
   padding: 0px 25px;
+  max-width: 800px;
 }
 
 .content a {
@@ -461,8 +462,11 @@ span {
   margin-right: 20px;
 }
 
+
 /* Media Queries */
 @media (min-width:625px) {
+  
+  
   /* ====================== Stylings ======================= */
   h1 {
     font-size: 3rem;
@@ -487,6 +491,7 @@ span {
 
   .desktop-nav-menu {
     display: flex;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   }
 
   .header-logo {
@@ -498,7 +503,7 @@ span {
     flex-direction: column;
     max-width: 1440px;
     padding: 25px 0px 0px 0px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    
   }
 
   .info-container {
@@ -537,13 +542,9 @@ span {
     opacity: 100%;
   }
 
-  
-
-  
-
-  
-
-
+  .tabs {
+    border-top: none;
+  }
   /* ======================= Planet Image Size ===================== */
   .image-container {
     height: 440px;
@@ -588,6 +589,8 @@ span {
    height: 285px;
   }
 
+
+
   /* ==================== Footer ======================= */
   footer {
     max-width: 1000px;
@@ -607,7 +610,6 @@ span {
     gap: 10px;
   }
 }
-
 @media (min-width:1000px) {
   /* ==================== Stylings ===================== */
   h1 {
@@ -639,38 +641,16 @@ span {
   }
 
   /* ======================= Layout ========================= */
-  .content-container {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-  }
-
-  .tabs-container {
-    grid-area: 2 / 2 / 3 / 3 ;
-    flex-direction: column;
-    border: 1px solid red;
-  }
-
-  .image-container {
-    grid-area: 1 / 1 / 3 / 2;
-    width: 100vw;
-    height: 430px;
-    border: 1px solid red;
-  }
-
-  .tabs-content-active {
-    display: grid;
-  }
-
-  .content {
-    grid-area: 1 / 2 / 2 / 3;
-    border: 1px solid navajowhite;
-    width: 50%;
+  main {
+    max-width: 1200px;
   }
 
   
 
   /* ======================= Planet Image Size ===================== */
+  .image-container {
+    height: 680px;
+  }
 
   .mercury-container .planet-img {
     width: 290px;
