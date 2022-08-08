@@ -387,6 +387,7 @@ footer {
   width: 100%;
   padding: 25px;
   max-width: 500px;
+
 }
 .stat-card {
   display: flex;
@@ -535,14 +536,7 @@ span {
   }
 
   
-  .tabs-button {
-    padding: 15px;
-    width: 100%;
-    max-width: 281px;
-    font-weight: bold;
-    border: 1px solid #38384F;
-    opacity: 100%;
-  }
+  
 
   .tabs {
     border-top: none;
@@ -595,7 +589,8 @@ span {
 
   /* ==================== Footer ======================= */
   footer {
-    max-width: 1000px;
+    max-width: 1100px;
+
   }
   
   .stat-card {
@@ -608,7 +603,7 @@ span {
   .stat-container {
     display: flex;
     width: 100%;
-    max-width: 1000px;
+    max-width: 1100px;
     gap: 10px;
   }
 }
@@ -626,9 +621,6 @@ span {
     font-size: 0.75rem;
   }
   
-  h4 {
-    font-size: ;
-  }
   
   p {
     font-size: 0.9rem;
@@ -643,10 +635,35 @@ span {
   }
 
   /* ======================= Layout ========================= */
-  
+  .active[data-tab-content] {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 1100px;
+  }
+
+  h1 {
+    text-align: left;
+  }
+
+  .active {
+    width: 100%;
+  }
+
+
+  .content p {
+    max-width: 350px;
+    text-align: left;
+    padding-left: 0px;
+  }
+
+  footer {
+    padding: 25px 0px;
+  }
   /* ======================= Planet Image Size ===================== */
   .image-container {
     height: 680px;
+    width: 680px;
   }
 
   .mercury-container .planet-img {
